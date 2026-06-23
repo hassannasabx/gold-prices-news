@@ -1,0 +1,33 @@
+{
+  "name": "gold-prices-news",
+  "version": "1.0.0",
+  "description": "Automated global gold prices news website with multilingual support",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "fetch-prices": "node scripts/fetch-prices.js",
+    "generate-articles": "node scripts/generate-articles.js",
+    "publish": "node scripts/publish.js",
+    "deploy": "npm run build && npm run fetch-prices && npm run generate-articles && npm run publish"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.6.0",
+    "firebase": "^10.0.0",
+    "firebase-admin": "^12.0.0",
+    "i18next": "^23.0.0",
+    "react-i18next": "^13.0.0",
+    "recharts": "^2.10.0",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.0",
+    "language-detect": "^0.0.9"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0"
+  }
+}
