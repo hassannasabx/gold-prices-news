@@ -1,0 +1,26 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "env": {
+    "METALS_API_KEY": "@metals_api_key",
+    "FIREBASE_API_KEY": "@firebase_api_key",
+    "FIREBASE_AUTH_DOMAIN": "@firebase_auth_domain",
+    "FIREBASE_PROJECT_ID": "@firebase_project_id"
+  },
+  "functions": {
+    "api/**": {
+      "memory": 1024,
+      "maxDuration": 300
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/prices",
+      "dest": "/api/prices.js"
+    },
+    {
+      "src": "/api/articles",
+      "dest": "/api/articles.js"
+    }
+  ]
+}
